@@ -1,0 +1,39 @@
+<template>
+    <!-- <lightning-card icon-name="standard:account" variant="base" title="Salesforce articles">
+      <div class="demo-only demo-only--sizing slds-grid slds-wrap ">
+        <div class="slds-m-around_medium">
+          <div class="slds-box slds-p-around_none slds-m-top_x-small slds-m-bottom_medium slds-m-horizontal_none ">
+            <lightning-layout>
+              <template for:each={articles} for:item="article">
+                  <lightning-card variant="narrow" key={article.title}>
+                          <lightning-layout-item padding="around-small">
+                              <div class="custom-box slds-box slds-p-around_medium slds-text-align_center --slds-g-color-surface-container-3">
+                                <lightning-icon icon-name="utility:link" size="xx-small" alternative-text="External link"></lightning-icon>
+                                <a href={article.url} target="_blank" rel="noopener noreferrer">{article.title}</a>
+                              </div>
+                          </lightning-layout-item>
+                  </lightning-card>
+              </template>
+            </lightning-layout>
+          </div>
+        </div>
+      </div> 
+    </lightning-card> -->
+    <div class="container">
+      <div class="slds-grid slds-gutters slds-wrap justify-center">
+        <template for:each={articles} for:item="item">
+          <div class="card" key={item.title}>
+            <img class="card-image" src={sfImage}/>
+            <div class="card-text">
+              <h2>{item.title}</h2>
+            </div>
+            <div class="card-stats" onclick={showModal} data-item={item.url}><a href={item.url} target="_blank" rel="noopener noreferrer">Read More</a></div>
+          </div>
+        </template>
+      </div>
+    </div>
+    
+</template>
+
+
+
